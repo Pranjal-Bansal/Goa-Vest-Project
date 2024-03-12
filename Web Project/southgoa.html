@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="try.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div class="masking">
+    <h2>SOUTH GOA</h2>
+</div>
+<br><br><br>
+
+<!-- slideshow -->
+
+    <div class="row">
+      <div class="column">
+        <img src="palmona.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="panaji.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="jesus.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="lighthouse.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="palmona.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="panaji.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="jesus.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="lighthouse.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+    
+        <div class="column">
+          <img class="demo cursor" src="palmona.jpg" style="width:100% " onclick="currentSlide(1)" alt="Palolem Beach" >
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="panaji.jpg" style="width:100%" onclick="currentSlide(2)" alt="Panaji Temple">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="jesus.jpg" style="width:100%" onclick="currentSlide(3)" alt="Basilica of Bom Jesus">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="lighthouse.jpg" style="width:100%" onclick="currentSlide(4)" alt="Aguada fort, lighthouse, portugese fort, 17th century">
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+
+<br><br>
+
+
+<!-- Acordian -->
+
+<button class="accordion">Majorda Beach</button>
+<div class="panel">
+    <br>
+    <img src="jet.jpeg" alt="" style="height: 400px; width: 600px;">
+  <p>Majorda is a village in Salcete, Goa. It is located in South Goa district, north-west of Margão. The village is famous for its beaches.</p>
+  <h3>JET SKIING:</h3>
+  <p> One of the best Water Sports in South Goa, jet skiing enables you to glide through the cool waters of the Arabian Sea, offering an experience unlike any other. Enjoy an exciting jet ski ride by yourself or take a friend along for added fun. The best part of this activity is that you also get training for it by expert professionals. <br>This activity offers you the thrill of manoeuvring through the gushing waves on a high-speed jet ski, with the cool wind blowing in your face and the cool water adding to the experience.</p>
+  <p>Location: Majorda Beach, Mobor Beach, Cavelossim, Betalbatim</p>
+  <p>Timings: 09:00 a.m. to 04:00 p.m.</p>
+  <p>Price: INR 800 onwards</p>
+
+</div>
+
+<button class="accordion">Palolem Beach</button>
+<div class="panel">
+    <br>
+    <img src="surfing.jpg" alt="" style="height: 400px; width: 600px;">
+    <p>Palolem Beach is situated in Canacona in southern Goa, India. The beach attracts many international tourists, mainly during the winter season between November and March. It is considered to be one of the region's most beautiful beaches.</p>
+    <h3>SURFING:</h3>
+    <p> Another one of the best South Goa Water Sports, surfing allows you a chance to conquer the gushing waves of the sea, in addition to offering you an unparalleled experience. In addition to being extremely thrilling and exciting, surfing in South Goa is also a fun sport to indulge in if you are a beginner surfer. <br>The waves here are quite mellow, making it perfect to acquaint oneself with the sport. You can also take surfing classes by experts here, and ride the waters on your surfboard for an unmatchable holiday experience.
+</p>
+<p>Location: Palolem Beach, Agonda Beach</p>
+<p>Timings: 10:00 a.m. to 06:00 p.m.</p>
+<p>Price:  INR 1,500 onwards</p>
+</div>
+
+<button class="accordion">Bogmalo Beach</button>
+<div class="panel">
+    <img src="parasailing.jpeg" alt="" style="height: 550px; width: 550px;">
+    <p>In Goa, India, there is a small beachside village called Bogmalo (pronounced "bma"). It is in a small bay and has a curving sandy beach that is about a mile long. The beach is about 4 kilometers (2.5 miles) from Dabolim Airport and 9 kilometers (5.6 miles) from Vasco da Gama, the port town. It is known to host AIESEC India conferences each June or July.</p>
+
+ <h3>PARASAILING:</h3> 
+    <p> One of the most popular and easiest Water Sports in South Goa is parasailing. It is an activity that should be at the top of your to-do list when you visit this beach paradise. By availing this activity, you can enjoy the thrill of flying across the azure blue waters of the sea as a high speed boat tugs you along.<br> In parasailing, you will be secured in one end of a parasail, while the other end is tied to the back of the motorboat. As soon as the boat starts to cruise along the waters, you will be lifted high up into the air. The activity also gives you the chance to soak in some of the most serene views of the surrounding landscapes.
+    </p>
+    <p>Location: Bogmalo Beach</p>
+    <p>Timings: 09:00 a.m. to 05:00 p.m.</p>
+    <p>Price:  INR 700 onwards</p>
+    </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<br><br><br><br><br>
+
+<!-- login page -->
+<div class="loginpg">
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="mod">
+  
+  <form class="mod-cont animate" action="/action_page.php" method="post">
+    <div class="imgcont">
+      <span onclick="document.getElementById('id01').style.display='none'" class="clo" title="Close Modal">&times;</span>
+      <img src="avatar.png" alt="Avatar" class="avatar" style="height: 400px;">
+    </div>
+
+    <div class="cont">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+   
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
+<footer>
+  <div class="r">
+      <div class="c">
+          <img src="logo3.png" class="footer_logo"><br>
+          <p class="footer_about" style="font-size: 25px;">Connect with Goa Vest!
+          </p>
+
+          <div class="social_icons">
+              <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+              <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+              <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+              <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+  
+      <div class="c">
+          <h3>Links <div class="bottom_line"><span></span></div></h3>
+          <ul>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="c">
+          <form>
+              <ion-icon class="icon" name="mail"></ion-icon>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+          </form>
+          
+      </div>
+  </div>
+  <hr>
+  <p class="copyright">Copyright @2023 All Rights Reserved</p>
+</footer> 
+
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="try.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div class="masking">
+    <h2>NORTH GOA</h2>
+
+</div>
+<br><br><br>
+
+<!-- slideshow -->
+
+    <div class="row">
+      <div class="column">
+        <img src="baga.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="hotair.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="sport.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="waterfall.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="baga.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="hotair.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="sport.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="waterfall.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+    
+        <div class="column">
+          <img class="demo cursor" src="baga.jpg" style="width:100% " onclick="currentSlide(1)" alt="Baga Beach" >
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="hotair.jpg" style="width:100%" onclick="currentSlide(2)" alt="Assolda">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="sport.jpg" style="width:100%" onclick="currentSlide(3)" alt="Chapora River">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="waterfall.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mollen National Park">
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+
+<br><br>
+
+
+<!-- Acordian -->
+
+<button class="accordion">BAGA BEACH</button>
+<div class="panel">
+    <br>
+    <img src="kayaking.jpeg" alt="kayaking" style="height: 400px; width: 600px;">
+  <p>Baga a shoreline town in Bardez, Goa, India. It goes under the locale of Calangute, which is 2 km south. The well-known beach and Baga Creek are what make Baga stand out. Every year, thousands of tourists come to see it.</p>
+  <p>North Goa's Baga Beach is a popular beach and tourist destination. It is at the north end of a contiguous beach stretch that begins in Sinquerim, Candolim, travels to Calangute, and then ends in Baga.</p>
+  <p>Parasailing in Baga Beach The beach is named after the Baga Creek, which empties into the Arabian Sea at the north end of the beach. Dolphins can be found approximately one to two kilometers from the shoreline.The beach is narrow at high tide.</p>
+  <h3>KAYAKING:</h3>
+  <p>Kayaking is a fun water sport. It involves the use of a kayak, a narrowboat with a double-blade paddle to move on water. The driver is supposed to navigate through the waterways by sitting face-forward and marching ahead with alternating side-to-side paddle strokes. Kayaking was originally invented for hunting.</p>
+
+  <p>Price: The Kayaking tour at Baga creek happens at a very pocket-friendly price. It may range between Rs. 500/- to Rs. 800/- and would last for 60 minutes.</p>
+  <p>Timings: 09:00 a.m. to 04:00 p.m.</p>
+</div>
+
+<button class="accordion">GRAND ISLAND</button>
+<div class="panel">
+    <br>
+    <img src="scuba diving.jpg" alt="scuba diving" style="height: 400px; width: 600px;">
+    <p>Goa Island (Portuguese: Ilha de Goa, lit. 'Island of Goa'), privately known as Watólofu, otherwise called Holy person George Island (Portuguese: Ilha So Jorge) is a small, typical desert peninsula with a white sand beach, a lighthouse, a rocky, brown coral reef, and an outcrop covered in dense borderline vegetation.<br><br> A variety of tropical fishes live there in the crystal-clear water that surrounds it. The island is uninhabited and situated inside Nampula Territory in Mozambique. It is in the Indian Ocean, near the Mozambique Channel, about 5 kilometers (3.1 miles) east of Mozambique Island. It is a member of the archipelago along with the Island of Sena (Portuguese: Mozambique's Island and the Island of Sena).</p>
+    <h3>SCUBA DIVING:</h3>
+    <p>The term "scuba," which stands for "Self-Contained Underwater Breathing Apparatus," was first used by Christian J. Lambertsen in a 1952 patent application.<br><br> Scuba diving is a type of underwater diving in which divers use breathing apparatus that is completely independent of a surface air supply and, as a result, has a limited but variable endurance.Scuba divers carry their own source of breathing gas, typically compressed air, which gives them more freedom of movement and independence than surface-supplied divers do and allows them to spend more time underwater than free divers do.<br><br> Although compressed air is commonly used, a gas blend with a higher oxygen content, known as enriched air or nitrox, has gained popularity because it reduces nitrogen intake during lengthy and/or frequent dives. Additionally, breathing gas weakened with helium might be utilized to decrease the probability and impacts of nitrogen narcosis during more profound plunges.</p>
+   
+   <p>Price: Scuba Diving Open Water Course	14999	Grand Island</p>
+   <p>Timings: 11:00 a.m. to 03:00 p.m.</p>
+</div>
+
+<button class="accordion">DUDHSAGAR FALLS</button>
+<div class="panel">
+    <img src="falls.jpg" alt="Dhudhsagar falls" style="height: 550px; width: 500px;">
+    <p>Dudhsagar Falls (lit. The four-tiered waterfall known as "Sea of Milk" can be found on the Mandovi River in the Indian state of Goa. It is 60 km from Panaji by street and is situated on the Belgaum-Vasco Da Gama rail course around 46 km east of Madgaon and 80 km south of Belgaum. <br><br>Dudhsagar Falls is among India's tallest cascades with a level of 310 m (1017 feet) and a typical width of 30 meters (100 feet).
+
+        In the Western Ghats, the falls are in the Bhagwan Mahaveer Sanctuary and Mollem National Park. The Mandovi River's journey from the Western Ghats to Panjim, where it meets the Arabian Sea, is marked by the falls. <br><br>The area is surrounded by abundantly diverse deciduous forests. Some of the locals also refer to this waterfall as Tambdi Surla. During the monsoon season, however, the falls are fed by rains and form a tremendous force of water. During the dry season, the falls are not particularly spectacular.</p>
+
+   <h3>TREEKING:</h3> 
+        <p>Trekking is an outdoor activity of walking for more than a day. It is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. Trekking could be a motive, It could be a commitment, an aim, an objective, a mission, a party, a social gathering.</p>
+
+  <p>Price: Dudhsagar Waterfall Trek | Starting at 1499 Only | Trekhievers.</p>
+  <p>Timings: 09:00 a.m. to 04:30 p.m.</p>    
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<br><br><br><br><br><br>
+
+<!-- login page -->
+<div class="loginpg">
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="mod">
+  
+  <form class="mod-cont animate" action="/action_page.php" method="post">
+    <div class="imgcont">
+      <span onclick="document.getElementById('id01').style.display='none'" class="clo" title="Close Modal">&times;</span>
+      <img src="avatar.png" alt="Avatar" class="avatar" style="height: 400px;">
+    </div>
+
+    <div class="cont">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+   
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
+<footer>
+  <div class="r">
+      <div class="c">
+          <img src="logo3.png" class="footer_logo"><br>
+          <p class="footer_about" style="font-size: 25px;">Connect with Goa Vest!
+          </p>
+
+          <div class="social_icons">
+              <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+              <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+              <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+              <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+  
+      <div class="c">
+          <h3>Links <div class="bottom_line"><span></span></div></h3>
+          <ul>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="c">
+          <form>
+              <ion-icon class="icon" name="mail"></ion-icon>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+          </form>
+          
+      </div>
+  </div>
+  <hr>
+  <p class="copyright">Copyright @2023 All Rights Reserved</p>
+</footer> 
+
+
+</body>
+</html>

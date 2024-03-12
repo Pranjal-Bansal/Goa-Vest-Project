@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="MainFile.css">
+<link rel="icon" type="image/x-icon" href="logo3.png">
+<title>GOA VEST</title>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body>
+
+    <div class="first">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="aboutus.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        
+        <script>
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+        </script>
+        </div>
+        
+
+        <div class="two">
+
+            <div class="slideshow-container">
+            
+                <div class="mySlides fade">
+                  <img src="8.jpg" style="width:100% ">
+                  <div class="text1"></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="2.jpeg" style="width:100%">
+                  <div class="text1"></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="g2.webp" style="width:100%">
+                  <div class="text1"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="12.webp" style="width:100%">
+                    <div class="text1"></div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="4.jpg" style="width:100%">
+                    <div class="text1"></div>
+                  </div>
+
+
+                </div>
+            
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span>
+                  </div>
+            
+                <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+            
+            </div>
+   
+
+<div class="parallax"></div>
+
+<div style="height:800px;background-color: rgba(249, 193, 193, 0.886);font-size:30px;">
+    
+    <section class="slide-in">
+        <p> Goa, located on the west coast of India, is a popular tourist destination known for its beautiful beaches and vibrant nightlife. But it's also an excellent place for adventure enthusiasts who seek an adrenaline rush. There are a plethora of adventure activities to choose from, including parasailing, jet skiing, scuba diving, snorkeling, kayaking, and banana boat rides. For those who prefer land-based activities, there's trekking, rock climbing, and cycling. Bungee jumping and white-water rafting are also available in some places. Goa's lush green forests, scenic waterfalls, and winding rivers provide the perfect backdrop for these activities. Adventure seekers can have an exhilarating experience in Goa while enjoying the natural beauty of the place.</p>      
+        <br>
+        </section>
+        <div class="xx"><img src="g3.jpg" style="border-radius: 60%;  position: absolute; right: 400px; ;"></div>
+      <script>
+        const slideIn = document.querySelector('.slide-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+});
+           
+observer.observe(slideIn);
+      </script>
+
+</div>
+
+<div class="parallax"></div>
+
+
+<div class="animation" style="padding-top: 4vh;">
+<section id="section2">
+  <div class="content">
+    <img src="ngoa.jpg" alt="north goa">
+    <div class="text">
+      <h2 >NORTH GOA</h2>
+      <p>North Goa is a popular tourist destination located in the Indian state of Goa,known for its beautiful beaches, vibrant nightlife, and historical landmarks.</p>
+      <button class="button button2"><a href="try.html">view more</a></button>
+    </div>
+  </div>
+</section>
+<br>
+
+<div class="row" style="padding-bottom: 4vh;">
+  <div class="column">
+    <img src="sgoa1.jpg" alt="south goa" >
+  </div>
+  <div class="t2">
+    <h2>SOUTH GOA</h2>
+    <p>South Goa is a serene and laid-back district in the Indian state of Goa,<br> known for its pristine beaches, scenic countryside, and historic architecture.</p>
+    <button class="button button2"><a href="southgoa.html">view more</a> </button>
+  </div>
+</div>
+
+</div>
+
+<!-- footer -->
+
+<footer>
+  <div class="r">
+      <div class="c">
+          <img src="logo3.png" class="footer_logo"><br>
+          <p class="footer_about" style="font-size: 25px;">Connect with Goa Vest!
+          </p>
+
+          <div class="social_icons">
+              <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+              <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+              <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+              <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+  
+      <div class="c">
+          <h3>Links <div class="bottom_line"><span></span></div></h3>
+          <ul>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="c">
+          <form>
+              <ion-icon class="icon" name="mail"></ion-icon>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+          </form>
+          
+      </div>
+  </div>
+  <hr>
+  <p class="copyright">Copyright @2023 All Rights Reserved</p>
+</footer> 
+
+</body>
+</html>
